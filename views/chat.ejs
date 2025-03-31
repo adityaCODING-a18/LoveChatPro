@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LoveChatPro</title>
+    <link rel="stylesheet" href="chat.css">
+</head>
+
+<body data-username="<%= userName %>"> <!-- ✅ Store username for JS access -->
+
+    <header>
+        <nav>
+            <ul class="navBar">
+                <li class="navitem logotext">LoveChatPro</li>
+                <li class="navitem item active">Chatting</li>
+                <li class="navitem item">with</li>
+                <li class="navitem item"><%= userName %></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div id="chatBox"></div>
+        <p id="typingIndicator"></p> <!-- ✅ Typing indicator -->
+    </main>
+
+    <footer>
+        <input type="text" id="messageInput" placeholder="Type a message" onkeypress="handleTyping()">
+        <button class="btn" onclick="sendMessage()">Send</button>
+    </footer>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="chat.js"></script>
+</body>
+
+</html>
