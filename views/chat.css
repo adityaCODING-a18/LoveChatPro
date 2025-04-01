@@ -208,7 +208,7 @@ button {
 }
 
 .btn::after {
-    content: "Login";
+    content: "Send";
     color: whitesmoke;
     display: flex;
     align-items: center;
